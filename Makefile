@@ -1,7 +1,7 @@
 .DEFAULT_GOAL	:= a
 PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= $(PARENT_DIR)
-MANDATORY		= itoa
+MANDATORY		= itoa split
 
 CC 		= clang
 CFLAGS 	= -I$(LIBFT_PATH)
