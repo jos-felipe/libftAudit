@@ -1,13 +1,14 @@
 .DEFAULT_GOAL	:= a
 PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= $(PARENT_DIR)
-MANDATORY		= itoa split
+#MANDATORY		= itoa split
+MANDATORY		= isalpha isdigit isalnum
 
 CC 		= clang
-CFLAGS 	= -I$(LIBFT_PATH)
+CFLAGS 	= -I$(LIBFT_PATH) -I./
 
 $(MANDATORY): %: mandatory_start
-	@$(CC) $(CFLAGS) ft_$*_t.c -L$(LIBFT_PATH) -lft && ./a.out && rm -f a.out
+	@$(CC) $(CFLAGS) ft_$*_t.c -L$(LIBFT_PATH) -lft -L./ -lrt -lm && ./a.out && rm -f a.out
 
 mandatory_start: update message
 	@tput setaf 6
