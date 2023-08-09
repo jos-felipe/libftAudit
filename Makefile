@@ -1,8 +1,11 @@
-.DEFAULT_GOAL	:= a
-PARENT_DIR		= $(shell dirname $(shell pwd))
-LIBFT_PATH		= $(PARENT_DIR)
-#MANDATORY		= itoa split
-MANDATORY		= isalpha isdigit isalnum
+.DEFAULT_GOAL	=	a
+PARENT_DIR		=	$(shell dirname $(shell pwd))
+LIBFT_PATH		=	$(PARENT_DIR)
+#MANDATORY		=	itoa split
+MANDATORY		= 	isalpha		\
+					isdigit		\
+					isalnum		\
+					isascii
 
 CC 		= clang
 CFLAGS 	= -I$(LIBFT_PATH) -I./
